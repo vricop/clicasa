@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Lato;
+  src: local(Lato-Light), url(/fonts/Lato-Light.woff2) format('woff2'),
+    url(/fonts/Lato-Light.woff) format('woff'),
+    url(/fonts/Lato-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: local(Lato-Regular), url(/fonts/Lato-Regular.woff2) format('woff2'),
+    url(/fonts/Lato-Regular.woff) format('woff'),
+    url(/fonts/Lato-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: local(Lato-Bold), url(/fonts/Lato-Bold.woff2) format('woff2'),
+    url(/fonts/Lato-Bold.woff) format('woff'),
+    url(/fonts/Lato-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: local(Lato-Black), url(/fonts/Lato-Black.woff2) format('woff2'),
+    url(/fonts/Lato-Black.woff) format('woff'),
+    url(/fonts/Lato-Black.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Palatino';
+  src: local('Palatino'), url('/fonts/Palatino.woff2') format('woff2'),
+    url('/fonts/Palatino.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}

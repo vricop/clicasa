@@ -1,0 +1,19 @@
+$theme-colors: (
+  'primary': #008bd1,
+  'primary-accent': hsl(200, 100%, 20%),
+  'greyish-brown': #4a4a4a,
+  'warm-grey': #9b9b9b,
+  'cool-grey': #a7acae,
+  'light-gray': #e5e5e5,
+);
+
+$font-family-base: Lato;
+
+$container-max-widths: (
+  xl: 75em,
+);
+
+$grid-gutter-width: 1.875rem;
+
+// $enable-grid-classes: false;
+$enable-cssgrid: true;

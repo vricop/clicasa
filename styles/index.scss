@@ -1,0 +1,16 @@
+/*******************************************************************************
+  BOOTSTRAP
+*******************************************************************************/
+// Required
+@import '~bootstrap/scss/functions';
+// Custom
+@import './custom-bootstrap-config';
+@import './fonts';
+// Required
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+// Needed modules
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
