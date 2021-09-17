@@ -1,0 +1,167 @@
+.hero-header-wrapper {
+  padding-block: 4.375em;
+  background-image: url('../../public/images/ferran-fusalba-99194.jpg');
+  background-size: cover;
+  background-position: bottom;
+  text-align: center;
+}
+
+.hero-header {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  justify-items: center;
+
+  &__title {
+    font-size: 4.375em;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--bs-white);
+
+    &__bold {
+      font-weight: bold;
+    }
+  }
+
+  &__cta {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  &__cta__tagline {
+    margin: 0;
+    color: var(--bs-white);
+    font-size: 1.125em;
+    font-weight: bold;
+  }
+
+  &__cta__button {
+    display: grid;
+    grid-template-areas: 'label icon';
+    gap: 1ch;
+    align-items: center;
+    padding-block: 0.75em;
+    padding-inline: 1em;
+    background-color: rgba(var(--bs-white-rgb), 0.75);
+    border-radius: 100vh;
+    border-color: transparent;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+    font-weight: bold;
+    transition: background-color 200ms ease;
+
+    &::before,
+    &::after {
+      transition: color, border-left-color, background-color 200ms ease;
+    }
+
+    &:hover {
+      background-color: var(--bs-primary);
+      color: var(--bs-white);
+    }
+
+    &::before {
+      grid-area: icon;
+      content: '';
+      width: var(--size);
+      display: block;
+      background-color: var(--bs-primary);
+      height: var(--size);
+      border-radius: 100vh;
+      --size: 2em;
+    }
+
+    &:hover::before {
+      background-color: var(--bs-white);
+    }
+
+    &::after {
+      border-width: 0.5em;
+      border-style: solid;
+      border-color: transparent transparent transparent white;
+      content: '';
+      grid-area: icon;
+      display: block;
+      justify-self: center;
+      align-self: center;
+      transform: translateX(0.25em);
+    }
+
+    &:hover::after {
+      border-left-color: var(--bs-primary);
+    }
+  }
+
+  @media (max-width: 45em) {
+    gap: 1rem;
+
+    &__cta__button {
+      display: none;
+    }
+
+    &__title {
+      font-size: 2em;
+    }
+  }
+}
+
+.search-form {
+  width: 100%;
+  max-width: 39.375em;
+  border-radius: 0.25em;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+
+  &__icon {
+    display: none;
+  }
+
+  &__input {
+    border: none;
+    padding-block: 0.82em;
+    padding-inline: 1.5em;
+    border-radius: 0.1875em;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    border-color: transparent;
+    text-transform: uppercase;
+    padding-block: 0.7em;
+    padding-inline: 1.5em;
+    border-radius: 0.1875em;
+    font-weight: 900;
+    transition: background-color 200ms ease;
+
+    &:hover {
+      background-color: var(--bs-primary-accent);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(var(--bs-primary-rgb), 0.25);
+      outline: none;
+    }
+  }
+
+  @media (min-width: 45em) {
+    padding: 1em;
+    background-color: var(--bs-white);
+    grid-template-columns: auto 1fr auto;
+
+    &:focus-within {
+      box-shadow: 0 0 0 4px rgba(var(--bs-primary-accent-rgb), 0.25);
+    }
+
+    &__icon {
+      display: block;
+    }
+  }
+}
