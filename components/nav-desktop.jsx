@@ -22,24 +22,24 @@ NavDesktop.Nav = function Nav() {
       <ul className="nav-desktop__nav__menu">
         <li>
           <a className="nav-desktop__nav__menu__link" href="/vender">
-            <span>Vender</span>
+            Vender
           </a>
         </li>
         <li>
           <a className="nav-desktop__nav__menu__link" href="/comprar">
-            <span>Comprar</span>
+            Comprar
           </a>
         </li>
         <li>
           <a
             className="nav-desktop__nav__menu__link"
             href="/yoelijocliComprarcpiso">
-            <span>#YoElijoClicPiso</span>
+            #YoElijoClicPiso
           </a>
         </li>
         <li>
           <a className="nav-desktop__nav__menu__link" href="/por-que-clicpiso">
-            <span>¿Por qué clicpiso?</span>
+            ¿Por qué clicpiso
           </a>
         </li>
       </ul>
@@ -71,7 +71,7 @@ NavDesktop.SocialNav = function SocialNav() {
                 font-size: 1.25em;
               }
             `}</style>
-            <span>910 123 456</span>
+            910 123 456
           </a>
         </li>
         <li>

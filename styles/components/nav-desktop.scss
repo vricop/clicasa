@@ -6,6 +6,12 @@
   align-items: center;
   background-color: var(--bs-white);
 
+  @media (max-width: 65.5em) {
+    & {
+      display: none;
+    }
+  }
+
   &__nav {
     margin-left: auto;
     margin-right: auto;
@@ -29,35 +35,35 @@
     text-transform: uppercase;
     font-weight: bold;
     transition: color 200ms ease;
-    display: grid;
-    padding-block-start: 0.5em;
+    display: block;
+    padding-block: 0.75em;
     padding-inline: 1em;
-    grid-template:
-      'link'
-      'line';
-    grid-area: link;
-    row-gap: 0.5em;
-    justify-items: end;
+    position: relative;
 
+    &[data-state='active']::after,
     &:hover {
       color: var(--bs-primary);
     }
 
+    &[data-state='active']::after,
     &::after {
+      position: absolute;
       content: '';
-      justify-self: stretch;
-      height: 0.25em;
-      background-color: transparent;
-      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* Exponential-out */
+      height: 0.1875em;
+      background-color: currentcolor;
+      display: block;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* Exponential-out */
       transform: scale3d(0, 1, 0);
       transform-origin: center right;
-      grid-area: line;
     }
 
+    &[data-state='active']::after,
     &:hover::after {
       transform: scale3d(1, 1, 1);
       transform-origin: center left;
-      background-color: var(--bs-primary);
     }
   }
 
