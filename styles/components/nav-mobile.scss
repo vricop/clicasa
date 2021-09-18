@@ -37,12 +37,16 @@
     transition: all 200ms ease;
   }
 
+  [data-side] {
+    --offset: 0.25em;
+  }
+
   [data-side='middle'] {
-    margin-block: 0.25em;
+    margin-block: var(--offset);
   }
 
   &[aria-expanded] [data-side='top'] {
-    transform: translateY(calc(0.5em + 3px)) rotate(-45deg);
+    transform: translateY(calc(var(--offset) + 3px)) rotate(-45deg);
   }
 
   &[aria-expanded] [data-side='middle'] {
@@ -51,7 +55,7 @@
   }
 
   &[aria-expanded] [data-side='bottom'] {
-    transform: translateY(calc(-0.5em - 3px)) rotate(45deg);
+    transform: translateY(calc(var(--offset) * -1 - 3px)) rotate(45deg);
   }
 }
 
