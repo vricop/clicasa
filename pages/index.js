@@ -1,5 +1,6 @@
 import CoreValues from '../components/core-values'
 import HeroHeader from '../components/hero-header'
+import RatesCTA from '../components/rates-cta'
 import Steps from '../components/steps'
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
           tagline="Firma la venta y recibe el dinero"
         />
       </Steps>
+      <RatesCTA />
     </>
   )
 }

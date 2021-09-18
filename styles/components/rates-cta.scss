@@ -1,0 +1,61 @@
+.rates-cta-wrapper {
+  background-image: url('../../public/images/cta.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  padding-block: 4.1875rem;
+  margin-top: -4rem;
+}
+
+.rates-cta {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  row-gap: 2.5rem;
+
+  &__header {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    row-gap: 1rem;
+  }
+  &__header__heading {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 300;
+    margin: 0;
+
+    @media (min-width: 45em) {
+      font-size: 3em;
+    }
+  }
+
+  &__header__tagline {
+    font-size: 0.875rem;
+    margin: 0;
+    max-width: 41.4375rem;
+
+    @media (min-width: 45rem) {
+      font-size: 1em;
+    }
+  }
+
+  &__button {
+    border-radius: 100vh;
+    border: 2px solid var(--bs-white);
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.75em 1.75rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.1ex;
+    transition: background-color, color 200ms ease;
+
+    &:hover {
+      background-color: var(--bs-white);
+      color: var(--bs-primary);
+    }
+  }
+}

@@ -1,10 +1,3 @@
-@use 'utilities';
-@use 'global';
-@use './components/nav-desktop';
-@use './components/nav-mobile';
-@use './components/hero-header';
-@use './components/core-values';
-@use './components/steps';
 /*******************************************************************************
   BOOTSTRAP
 *******************************************************************************/
@@ -21,3 +14,14 @@
 @import '~bootstrap/scss/grid';
 @import '~bootstrap/scss/root';
 @import '~bootstrap/scss/reboot';
+/*******************************************************************************
+  COMPONENTS
+*******************************************************************************/
+@import 'utilities';
+@import 'global';
+@import './components/nav-desktop';
+@import './components/nav-mobile';
+@import './components/hero-header';
+@import './components/core-values';
+@import './components/steps';
+@import './components/rates-cta';
