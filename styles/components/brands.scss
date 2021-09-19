@@ -1,0 +1,40 @@
+.brands-wrapper {
+  background-color: var(--bs-white);
+  padding-block: 4.1875rem;
+}
+
+.brands {
+  text-align: center;
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 3rem;
+
+  &__header {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 0.25rem;
+    justify-content: center;
+  }
+
+  &__header__heading {
+    font-size: 2.625em;
+    font-weight: 300;
+    color: var(--bs-primary);
+    margin-bottom: 0;
+  }
+
+  &__header__tagline {
+    max-width: 34.375rem;
+    margin-inline: auto;
+    margin-bottom: 0;
+    font-size: 1.125em;
+    font-weight: 300;
+    color: var(--bs-gray-600);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+    gap: 1.875rem;
+  }
+}

@@ -1,3 +1,4 @@
+import Brands from '../components/brands'
 import CoreValues from '../components/core-values'
 import HeroHeader from '../components/hero-header'
 import RatesCTA from '../components/rates-cta'
@@ -28,6 +29,7 @@ export default function Home() {
         />
       </Steps>
       <RatesCTA />
+      <Brands />
     </>
   )
 }
