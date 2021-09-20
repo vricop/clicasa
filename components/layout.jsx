@@ -1,3 +1,4 @@
+import Footer from './footer'
 import NavDesktop from './nav-desktop'
 import NavMobile from './nav-mobile'
 
@@ -14,6 +15,7 @@ export default function Layout({ children }) {
         <NavMobile.SocialNav />
       </NavMobile>
       {children}
+      <Footer />
     </>
   )
 }

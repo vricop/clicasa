@@ -19,6 +19,7 @@ export default function CoreValues({ children }) {
               className="core-values-items__item__icon"
               icon="time"
               width="3.75em"
+              style={{ color: 'var(--bs-gray-500)' }}
             />
             <h3 className="core-values-items__item__title">Oferta en 24 h</h3>
             <p className="core-values-items__item__description">
@@ -30,6 +31,7 @@ export default function CoreValues({ children }) {
               className="core-values-items__item__icon"
               icon="wallet"
               width="3.75em"
+              style={{ color: 'var(--bs-gray-500)' }}
             />
             <h3 className="core-values-items__item__title">Pago inmediato</h3>
             <p className="core-values-items__item__description">
@@ -41,6 +43,7 @@ export default function CoreValues({ children }) {
               className="core-values-items__item__icon"
               icon="paperplane"
               width="3.75em"
+              style={{ color: 'var(--bs-gray-500)' }}
             />
             <h3 className="core-values-items__item__title">
               Ahórrate el papeleo
@@ -55,6 +58,7 @@ export default function CoreValues({ children }) {
               className="core-values-items__item__icon"
               icon="calendar"
               width="3.75em"
+              style={{ color: 'var(--bs-gray-500)' }}
             />
             <h3 className="core-values-items__item__title">
               Tu eliges la fecha

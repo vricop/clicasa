@@ -1,0 +1,114 @@
+.footer-wrapper {
+  padding-block: 1.875rem;
+
+  @media (min-width: 60rem) {
+    display: grid;
+    grid-template:
+      'logo . contact-info' auto
+      'line line line' auto
+      'footer-legal footer-links footer-social-links' auto
+      / max-content auto max-content;
+    align-items: center;
+    justify-items: space-between;
+    gap: 1.875rem;
+
+    &::before {
+      grid-area: line;
+      content: '';
+      height: 1px;
+      background-color: var(--bs-gray-200);
+    }
+  }
+
+  @media (max-width: 60rem) {
+    text-align: center;
+
+    & > * + * {
+      padding-block: 1rem;
+    }
+
+    & > * + *:not(.footer-links) {
+      border-top: 1px solid var(--bs-gray-200);
+    }
+  }
+}
+
+.footer-links {
+  list-style-type: none;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  @media (min-width: 60rem) {
+    grid-area: footer-links;
+  }
+
+  &__item {
+    font-size: 0.875em;
+    color: var(--bs-gray-600);
+    text-decoration: none;
+    transition: color 200ms ease;
+
+    &:hover {
+      color: var(--bs-primary);
+    }
+  }
+}
+
+.contact-info {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 1.875rem;
+  list-style-type: none;
+
+  @media (min-width: 60rem) {
+    grid-area: contact-info;
+    justify-content: end;
+  }
+
+  &__link {
+    display: grid;
+    gap: 0.5ch;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    color: var(--bs-gray-800);
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+  &__link:hover {
+    color: var(--bs-primary);
+  }
+}
+
+.footer-legal {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  color: var(--bs-gray-800);
+  padding-left: 0;
+  margin-bottom: 0;
+
+  @media (min-width: 60rem) {
+    grid-area: footer-legal;
+  }
+}
+
+.footer-social-links {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: grid;
+  gap: 1ch;
+  grid-auto-flow: column;
+  justify-content: center;
+
+  @media (min-width: 60rem) {
+    grid-area: footer-social-links;
+    justify-content: end;
+  }
+}

@@ -34,19 +34,31 @@ NavMobile.SocialNav = function SocialNav() {
       <ul className="social-nav">
         <li>
           <a href="tel:+34910123456" aria-label="Teléfono">
-            <Svg width="2.5rem" icon="phone" />
+            <Svg
+              width="2.5rem"
+              icon="phone"
+              style={{ color: 'var(--bs-primary)' }}
+            />
           </a>
         </li>
         <li>
           <a
             href="https://api.whatsapp.com/send?phone=+346112233"
             aria-label="WhatsAPP">
-            <Svg width="2.5rem" icon="whatsapp" />
+            <Svg
+              width="2.5rem"
+              icon="whatsapp"
+              style={{ color: 'var(--bs-whatsapp)' }}
+            />
           </a>
         </li>
         <li>
           <a href="/email" aria-label="Email">
-            <Svg width="2.5rem" icon="email" />
+            <Svg
+              width="2.5rem"
+              icon="email"
+              style={{ color: 'var(--bs-primary)' }}
+            />
           </a>
         </li>
       </ul>

@@ -10,7 +10,12 @@ export default function HeroHeader({ children }) {
           en un <strong className="hero-header-title__bold">clic</strong>
         </h1>
         <form className="search-form" action="">
-          <Svg className="search-form__icon" width="1.625em" icon="home" />
+          <Svg
+            className="search-form__icon"
+            width="1.625em"
+            icon="home"
+            style={{ color: 'var(--bs-gray-500)' }}
+          />
           <label aria-hidden="true" hidden htmlFor="">
             Introduce la dirección de tu casa o piso
           </label>

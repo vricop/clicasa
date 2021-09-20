@@ -3,6 +3,11 @@
   margin-top: -4rem;
   background-image: url('../../public/images/windows-bg.jpg');
   background-size: cover;
+
+  @media (min-width: 65rem) {
+    background-image: linear-gradient(transparent 60%, var(--bs-white) 60%),
+      url('../../public/images/windows-bg.jpg');
+  }
 }
 
 .steps-content {
@@ -14,11 +19,15 @@
   }
 
   &__header__heading {
-    font-size: 2.625em;
+    font-size: 1.5em;
     font-weight: 300;
     line-height: 1.1;
     color: var(--bs-primary);
     text-align: center;
+
+    @media (min-width: 45rem) {
+      font-size: 2.625em;
+    }
   }
 
   &__header__tagline {

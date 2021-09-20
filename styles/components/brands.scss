@@ -7,6 +7,7 @@
   text-align: center;
   display: grid;
   grid-auto-flow: row;
+  max-width: calc(740px + 3rem);
   row-gap: 3rem;
 
   &__header {
@@ -17,10 +18,14 @@
   }
 
   &__header__heading {
-    font-size: 2.625em;
+    font-size: 1.5rem;
     font-weight: 300;
     color: var(--bs-primary);
     margin-bottom: 0;
+
+    @media (min-width: 45rem) {
+      font-size: 2.625em;
+    }
   }
 
   &__header__tagline {
