@@ -1,6 +1,6 @@
 # Clicasa for [proun.es](https://www.proun.es/)
 
-This is fake project for a Front-end test interview for [proun.es](https://www.proun.es/).
+This is fake a project for a Front-end test interview for [proun.es](https://www.proun.es/).
 
 ## Aproach
 
