@@ -9,9 +9,18 @@ export default function NavMobile({ children }) {
 }
 
 NavMobile.Button = function Button() {
+  const handleClick = ({ currentTarget: button }) => {
+    const attr = 'aria-expanded'
+    const isActive = button.hasAttribute(attr)
+    const action = isActive ? 'removeAttribute' : 'setAttribute'
+    const args = isActive ? [attr] : [attr, true]
+    button[action](...args)
+  }
+
   return (
     <div className="nav-mobile-control">
       <button
+        onClick={handleClick}
         aria-label="Toggle menu"
         type="button"
         className="hamburguer-button">

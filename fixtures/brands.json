@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "alt": "Inmoseguros, seguros inmobiliarios",
+    "src": "/images/inmoseguros-370x192.png",
+    "srcSet": "/images/inmoseguros@2x-740x384.png 2x, /images/inmoseguros@3x-1110x576.png 3x",
+    "width": 370,
+    "height": 192
+  },
+  {
+    "id": 2,
+    "alt": "Seguros Mapfre",
+    "src": "/images/mapfre-370x192.png",
+    "srcSet": "/images/mapfre@2x-740x384.png 2x, /images/mapfre@3x-1110x576 3x",
+    "width": 370,
+    "height": 192
+  }
+]

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Brands({ children }) {
+export default function Brands({ children, details }) {
   return (
     <section className="brands-wrapper">
       <div className="container brands">
@@ -13,25 +13,12 @@ export default function Brands({ children }) {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </header>
-        <div className="brands__items">
-          <Image
-            layout="responsive"
-            alt="Inmoseguros, seguros inmobiliarios"
-            src="/images/inmoseguros-370x192.png"
-            srcset="/images/inmoseguros@2x-740x384.png 2x, /images/inmoseguros@3x-1110x576.png 3x"
-            width={370}
-            height={192}
-          />
-          <Image
-            layout="responsive"
-            alt="Seguros Mapfre"
-            src="/images/mapfre-370x192.png"
-            srcset="/images/mapfre@2x-740x384.png 2x, /images/mapfre@3x-1110x576 3x"
-            width={370}
-            height={192}
-          />
-        </div>
+        <div className="brands__items">{children}</div>
       </div>
     </section>
   )
+}
+
+Brands.Logo = function Logo(props) {
+  return <Image layout="responsive" {...props} />
 }

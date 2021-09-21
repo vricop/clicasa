@@ -1,5 +1,4 @@
 import Svg from './svg'
-
 export default function NavDesktop({ children }) {
   return (
     <div>

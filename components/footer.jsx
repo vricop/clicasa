@@ -1,25 +1,25 @@
+import Link from 'next/link'
 import Svg from './svg'
 
 export default function Footer({ children }) {
   return (
     <footer>
       <div className="container footer-wrapper">
-        <a
-          style={{ display: 'inline-block' }}
-          href="/"
-          aria-label="Go to homepage">
-          <Svg icon="clicasa" width="13.0625em" height="3.4375em" />
-        </a>
+        <Link href="/">
+          <a style={{ display: 'inline-block' }} aria-label="Go to homepage">
+            <Svg icon="clicasa" width="13.0625em" height="3.4375em" />
+          </a>
+        </Link>
         <nav className="footer-links" aria-label="Sumarized navigation">
-          <a className="footer-links__item" href="#mapa-web">
-            Mapa web
-          </a>
-          <a className="footer-links__item" href="#contacto">
-            Contacto
-          </a>
-          <a className="footer-links__item" href="#aviso-legal">
-            Aviso legal
-          </a>
+          <Link href="#mapa-web">
+            <a className="footer-links__item">Mapa web</a>
+          </Link>
+          <Link href="#contacto">
+            <a className="footer-links__item">Contacto</a>
+          </Link>
+          <Link href="#aviso-legal">
+            <a className="footer-links__item">Aviso legal</a>
+          </Link>
         </nav>
         <nav className="contact-info" aria-label="Contact links">
           <a

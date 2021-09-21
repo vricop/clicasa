@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Steps({ children }) {
   return (
     <section className="steps-section">
@@ -13,32 +15,32 @@ export default function Steps({ children }) {
         </header>
         <div className="steps-content__items">{children}</div>
         <footer className="steps-content__footer">
-          <div className="aspect-ratio">
-            <img
-              src="/images/man-laptop-typing-1030x534.jpg"
-              alt="Man typing in a laptop while using Clicasa website"
-            />
-          </div>
+          <Image
+            layout="responsive"
+            width={1030}
+            height={534}
+            src="/images/man-laptop-typing-1030x534.jpg"
+            alt="Man typing in a laptop while using Clicasa website"
+          />
         </footer>
       </div>
     </section>
   )
 }
 
-Steps.Step = function Step({ active, heading, tagline }) {
+Steps.Step = function Step({ active, heading, tagline, thumbnail, alt }) {
   return (
     <article data-active={active} className="step">
       <h3 className="step__header__heading">{heading}</h3>
       <p className="step__header__tagline">{tagline}</p>
       <figure className="step__thumbnail">
-        <div className="aspect-ratio" style={{ '--fraction': '16/9' }}>
-          <img
-            width="346"
-            height="179"
-            src="/images/man-laptop-typing-346x179.jpg"
-            alt="Man typing in a laptop while using Clicasa website"
-          />
-        </div>
+        <Image
+          layout="responsive"
+          width={346}
+          height={179}
+          src={thumbnail}
+          alt={alt}
+        />
       </figure>
     </article>
   )

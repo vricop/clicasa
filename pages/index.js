@@ -4,32 +4,40 @@ import HeroHeader from '../components/hero-header'
 import RatesCTA from '../components/rates-cta'
 import Steps from '../components/steps'
 
-export default function Home() {
+export default function Home({ steps, brands }) {
   return (
     <>
       <HeroHeader />
       <CoreValues />
       <Steps>
-        <Steps.Step
-          active
-          heading="Descríbemos tu inmueble"
-          tagline="No te preocupes de su estado, ni de reparaciones para eneseñarlo"
-        />
-        <Steps.Step
-          heading="Recibe una oferta en 24 horas"
-          tagline="Piénsatela!"
-        />
-        <Steps.Step
-          heading="Dinos hasta cuando quieres quedarte"
-          tagline="Nos ajustamos a tus necesidades, cuando tu estés listo nosotros también lo estaremos"
-        />
-        <Steps.Step
-          heading="Ya está!"
-          tagline="Firma la venta y recibe el dinero"
-        />
+        {steps.map(({ id, ...restProps }) => (
+          <Steps.Step
+            key={id}
+            {...{
+              ...restProps,
+              ...(id === 1 ? { active: '' } : {}),
+            }}
+          />
+        ))}
       </Steps>
       <RatesCTA />
-      <Brands />
+      <Brands>
+        {brands.map(({ id, ...restProps }) => (
+          <Brands.Logo key={id} {...restProps} />
+        ))}
+      </Brands>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const response1 = await fetch(`${process.env.BASE_URL}/api/steps`)
+  const steps = await response1.json()
+
+  const response2 = await fetch(`${process.env.BASE_URL}/api/brands`)
+  const brands = await response2.json()
+
+  return {
+    props: { steps, brands },
+  }
 }
