@@ -77,6 +77,10 @@
   @media (min-width: 65rem) {
     row-gap: 0.5rem;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &[data-active] {
       background-color: var(--bs-white);
       border-bottom: 0.5rem solid var(--bs-primary);

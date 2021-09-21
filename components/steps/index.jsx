@@ -1,6 +1,8 @@
-import Image from 'next/image'
+import { StepsProvider, useStepsProvider } from './steps-context'
 
-export default function Steps({ children }) {
+function StepsContent({ children }) {
+  const { imageRef, stepsRef } = useStepsProvider()
+
   return (
     <section className="steps-section">
       <div className="container steps-content">
@@ -13,12 +15,14 @@ export default function Steps({ children }) {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </header>
-        <div className="steps-content__items">{children}</div>
+        <div ref={stepsRef} className="steps-content__items">
+          {children}
+        </div>
         <footer className="steps-content__footer">
-          <Image
-            layout="responsive"
-            width={1030}
-            height={534}
+          <img
+            ref={imageRef}
+            width="1030"
+            height="534"
             src="/images/man-laptop-typing-1030x534.jpg"
             alt="Man typing in a laptop while using Clicasa website"
           />
@@ -28,19 +32,27 @@ export default function Steps({ children }) {
   )
 }
 
-Steps.Step = function Step({ active, heading, tagline, thumbnail, alt }) {
+export default function Steps({ children }) {
   return (
-    <article data-active={active} className="step">
+    <StepsProvider>
+      <StepsContent {...{ children }} />
+    </StepsProvider>
+  )
+}
+
+Steps.Step = function Step({ active, heading, tagline, thumbnail, alt, id }) {
+  const { updateCurrentActiveStep } = useStepsProvider()
+
+  return (
+    <article
+      onClick={updateCurrentActiveStep}
+      data-active={active}
+      id={id}
+      className="step">
       <h3 className="step__header__heading">{heading}</h3>
       <p className="step__header__tagline">{tagline}</p>
-      <figure className="step__thumbnail">
-        <Image
-          layout="responsive"
-          width={346}
-          height={179}
-          src={thumbnail}
-          alt={alt}
-        />
+      <figure className="step__thumbnail aspect-ratio">
+        <img width="346" height="179" src={thumbnail} alt={alt} />
       </figure>
     </article>
   )

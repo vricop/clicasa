@@ -14,6 +14,7 @@ export default function Home({ steps, brands }) {
           <Steps.Step
             key={id}
             {...{
+              id,
               ...restProps,
               ...(id === 1 ? { active: '' } : {}),
             }}
