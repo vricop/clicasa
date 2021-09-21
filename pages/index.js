@@ -1,7 +1,7 @@
 import Brands from '../components/brands'
+import CallToAction from '../components/call-to-action'
 import CoreValues from '../components/core-values'
 import HeroHeader from '../components/hero-header'
-import RatesCTA from '../components/rates-cta'
 import Steps from '../components/steps'
 
 export default function Home({ steps, brands }) {
@@ -20,12 +20,25 @@ export default function Home({ steps, brands }) {
           />
         ))}
       </Steps>
-      <RatesCTA />
+      <CallToAction
+        className="our-rates-cta"
+        title="Las mejores condiciones del mercado inmobiliario"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        buttonLabel="Descubre nuestras tarifas"
+        backgroundImage="/images/cta.jpg"
+      />
       <Brands>
         {brands.map(({ id, ...restProps }) => (
           <Brands.Logo key={id} {...restProps} />
         ))}
       </Brands>
+      <CallToAction
+        className="real-state-cta"
+        title="¿Buscas casa? También tenemos las mejores ofertas"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        buttonLabel="Ver inmuebles"
+        backgroundImage="/images/room-375x280.jpg"
+      />
     </>
   )
 }
