@@ -18,6 +18,12 @@
     font-weight: 300;
     line-height: 1.1;
     color: var(--bs-white);
+    padding-bottom: 0.8857142857em;
+    background-image: url(../../public/images/arrow-pointer.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 1.2857142857em 0.8857142857em;
+    margin-bottom: 0;
 
     &__bold {
       font-weight: bold;
