@@ -28,7 +28,22 @@
     padding: 0;
   }
 
-  &__nav__menu__link {
+  &__nav__menu__item[data-has-submenu] &__nav__menu__item__link {
+    display: grid;
+    grid-template: 'text icon' auto / 1fr auto;
+    align-items: center;
+    gap: 1ch;
+  }
+
+  &__nav__menu__item[data-has-submenu] &__nav__menu__item__link::before {
+    grid-area: icon;
+    content: url('../../public/images/svgs/chevron-down-bg.svg');
+    width: 0.8em;
+    background-size: contain;
+    display: block;
+  }
+
+  &__nav__menu__item__link {
     color: var(--bs-gray-700);
     text-decoration: none;
     font-size: 0.875em;

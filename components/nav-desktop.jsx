@@ -19,25 +19,27 @@ NavDesktop.Nav = function Nav() {
   return (
     <div className="nav-desktop__nav">
       <ul className="nav-desktop__nav__menu">
-        <li>
-          <a className="nav-desktop__nav__menu__link" href="/vender">
+        <li className="nav-desktop__nav__menu__item">
+          <a className="nav-desktop__nav__menu__item__link" href="/vender">
             Vender
           </a>
         </li>
-        <li>
-          <a className="nav-desktop__nav__menu__link" href="/comprar">
+        <li className="nav-desktop__nav__menu__item">
+          <a className="nav-desktop__nav__menu__item__link" href="/comprar">
             Comprar
           </a>
         </li>
-        <li>
+        <li className="nav-desktop__nav__menu__item">
           <a
-            className="nav-desktop__nav__menu__link"
+            className="nav-desktop__nav__menu__item__link"
             href="/yoelijocliComprarcpiso">
             #YoElijoClicPiso
           </a>
         </li>
-        <li>
-          <a className="nav-desktop__nav__menu__link" href="/por-que-clicpiso">
+        <li className="nav-desktop__nav__menu__item" data-has-submenu="">
+          <a
+            className="nav-desktop__nav__menu__item__link"
+            href="/por-que-clicpiso">
             ¿Por qué clicpiso
           </a>
         </li>
