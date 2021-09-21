@@ -47,10 +47,9 @@
   &__cta__button {
     display: grid;
     grid-template-areas: 'label icon';
-    gap: 1ch;
+    gap: 3.5ch;
     align-items: center;
-    padding-block: 0.75em;
-    padding-inline: 1em;
+    padding: 0.75em 0.75em 0.75em 1.25em;
     background-color: rgba(var(--bs-white-rgb), 0.75);
     border-radius: 100vh;
     border-color: transparent;
