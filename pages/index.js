@@ -31,10 +31,20 @@ export default function Home({ steps, brands }) {
 }
 
 export async function getServerSideProps() {
-  const response1 = await fetch(`${process.env.BASE_URL}/api/steps`)
+  const response1 = await fetch(`${process.env.BASE_URL}/api/steps`, {
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': '*',
+    },
+  })
   const steps = await response1.json()
 
-  const response2 = await fetch(`${process.env.BASE_URL}/api/brands`)
+  const response2 = await fetch(`${process.env.BASE_URL}/api/brands`, {
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': '*',
+    },
+  })
   const brands = await response2.json()
 
   return {
