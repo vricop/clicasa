@@ -1,7 +1,8 @@
+import { useEffect } from 'react'
 import { StepsProvider, useStepsProvider } from './steps-context'
 
 function StepsContent({ children }) {
-  const { imageRef, stepsRef } = useStepsProvider()
+  const { currentStep } = useStepsProvider()
 
   return (
     <section className="steps-section">
@@ -15,15 +16,12 @@ function StepsContent({ children }) {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </header>
-        <div ref={stepsRef} className="steps-content__items">
-          {children}
-        </div>
+        <div className="steps-content__items">{children}</div>
         <footer className="steps-content__footer">
           <img
-            ref={imageRef}
             width="1030"
             height="534"
-            src="/images/man-laptop-typing-1030x534.jpg"
+            src={currentStep.src}
             alt="Man typing in a laptop while using Clicasa website"
           />
         </footer>
@@ -40,14 +38,20 @@ export default function Steps({ children }) {
   )
 }
 
-Steps.Step = function Step({ active, heading, tagline, thumbnail, alt, id }) {
-  const { updateCurrentActiveStep } = useStepsProvider()
+Steps.Step = function Step({ heading, tagline, thumbnail, alt, id }) {
+  const { addStep, currentStep, updateCurrentStep } = useStepsProvider()
+
+  useEffect(() => {
+    addStep({ src: thumbnail, id })
+  }, [])
 
   return (
     <article
-      onClick={updateCurrentActiveStep}
-      data-active={active}
+      onClick={() => {
+        updateCurrentStep({ src: thumbnail, id })
+      }}
       id={id}
+      data-active={id === currentStep.id ? '' : null}
       className="step">
       <h3 className="step__header__heading">{heading}</h3>
       <p className="step__header__tagline">{tagline}</p>

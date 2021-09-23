@@ -11,14 +11,7 @@ export default function Home({ steps, brands }) {
       <CoreValues />
       <Steps>
         {steps.map(({ id, ...restProps }) => (
-          <Steps.Step
-            key={id}
-            {...{
-              id,
-              ...restProps,
-              ...(id === 1 ? { active: '' } : {}),
-            }}
-          />
+          <Steps.Step key={id} id={id} {...restProps} />
         ))}
       </Steps>
       <CallToAction
