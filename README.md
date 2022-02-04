@@ -1,6 +1,6 @@
 # Clicasa for [proun.es](https://www.proun.es/)
 
-This is a Front-end test for a job interview at  [proun.es](https://www.proun.es/). The final result can be seent at [https://clicasa.vercel.app/](https://clicasa.vercel.app/)
+This is a Front-end test for a job interview at  [proun.es](https://www.proun.es/). The final result can be seen at [https://clicasa.vercel.app/](https://clicasa.vercel.app/)
 
 ## Aproach
 
